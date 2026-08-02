@@ -35,7 +35,7 @@ implementation, reviewed critically after, and verified rather than assumed corr
 
 ---
 
-## 🧱 Task 1 — Power-of-Two Max Heap
+## 🧱 Task 1 — Advanced Data Structures
 
 ![Java](https://img.shields.io/badge/Language-Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Complexity](https://img.shields.io/badge/insert-O(log__b%20n)-blue?style=flat-square)
@@ -53,7 +53,7 @@ inputs.
 
 ---
 
-## 🏗️ Task 2 — Reconfigurable Pipeline Architecture
+## 🏗️ Task 2 — Software Architecture
 
 ![Design](https://img.shields.io/badge/Pattern-Strategy%20%2B%20Registry-8E44AD?style=flat-square)
 ![Principles](https://img.shields.io/badge/SOLID-Compliant-2ECC71?style=flat-square)
@@ -70,7 +70,7 @@ new modes or databases are added as new classes with zero edits to existing code
 
 ---
 
-## 🗄️ Task 3 — Pet Department Database Design
+## 🗄️ Task 3 — Relational Database Design
 
 ![Normal Form](https://img.shields.io/badge/Normalization-3NF-2ECC71?style=flat-square)
 ![Tables](https://img.shields.io/badge/Tables-13-4479A1?style=flat-square)
@@ -88,7 +88,7 @@ business requirements, not assumed.
 
 ---
 
-## 🚚 Task 4 — Shipping Data Populator
+## 🚚 Task 4 — Data Munging
 
 ![Python](https://img.shields.io/badge/Python-Stdlib%20Only-3776AB?style=flat-square&logo=python&logoColor=white)
 ![DB](https://img.shields.io/badge/SQLite-Populated-003B57?style=flat-square&logo=sqlite&logoColor=white)
