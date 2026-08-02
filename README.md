@@ -26,10 +26,10 @@ implementation, reviewed critically after, and verified rather than assumed corr
 
 | # | Task | Focus | Stack |
 |:---:|---|---|:---:|
-| 1 | [Power-of-Two Max Heap](#-task-1--power-of-two-max-heap) | Data structures & algorithms | ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) |
-| 2 | [Reconfigurable Pipeline Architecture](#-task-2--reconfigurable-pipeline-architecture) | OOP design, SOLID, design patterns | ![UML](https://img.shields.io/badge/UML-2C3E50?logo=uml&logoColor=white) |
-| 3 | [Pet Department Database Design](#-task-3--pet-department-database-design) | Relational modeling, normalization | ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white) |
-| 4 | [Shipping Data Populator](#-task-4--shipping-data-populator) | ETL, data aggregation, SQLite | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) |
+| 1 | [Advanced Data Structures](#-task-1--power-of-two-max-heap) | Data structures & algorithms | ![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white) |
+| 2 | [Software Architecture](#-task-2--reconfigurable-pipeline-architecture) | OOP design, SOLID, design patterns | ![UML](https://img.shields.io/badge/UML-2C3E50?logo=uml&logoColor=white) |
+| 3 | [Relational Database Design](#-task-3--pet-department-database-design) | Relational modeling, normalization | ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white) |
+| 4 | [Data Munging](#-task-4--shipping-data-populator) | ETL, data aggregation, SQLite | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) |
 
 </div>
 
