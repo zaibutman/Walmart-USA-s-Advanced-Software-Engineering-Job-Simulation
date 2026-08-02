@@ -1,0 +1,90 @@
+<style>
+#cd svg.classDiagram .divider path { stroke-opacity: 0.5; }
+</style>
+<div id="cd"></div>
+<script type="module">
+import mermaid from 'https://esm.sh/mermaid@11/dist/mermaid.esm.min.mjs';
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+await document.fonts.ready;
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  fontFamily: '"Anthropic Sans", sans-serif',
+  themeVariables: {
+    darkMode: dark,
+    fontSize: '13px',
+    fontFamily: '"Anthropic Sans", sans-serif',
+    lineColor: dark ? '#9c9a92' : '#73726c',
+    textColor: dark ? '#c2c0b6' : '#3d3d3a',
+  },
+});
+const src = `classDiagram
+  class DataPoint {
+    <<existing>>
+  }
+  class ModeIdentifier {
+    <<enumeration>>
+    DUMP
+    PASSTHROUGH
+    VALIDATE
+  }
+  class DatabaseIdentifier {
+    <<enumeration>>
+    POSTGRESQL
+    REDIS
+    ELASTICSEARCH
+  }
+  class Database {
+    <<interface>>
+    +connect() void
+    +insert(DataPoint) void
+    +validate(DataPoint) boolean
+  }
+  class ProcessingMode {
+    <<interface>>
+    +execute(DataPoint, Database) void
+  }
+  class DumpMode
+  class PassthroughMode
+  class ValidateMode
+  class PostgresDatabase
+  class RedisDatabase
+  class ElasticsearchDatabase
+  class ModeRegistry {
+    -modes Map
+    +resolve(ModeIdentifier) ProcessingMode
+  }
+  class DatabaseRegistry {
+    -databases Map
+    +resolve(DatabaseIdentifier) Database
+  }
+  class DataProcessor {
+    -currentMode ProcessingMode
+    -currentDatabase Database
+    -modeRegistry ModeRegistry
+    -databaseRegistry DatabaseRegistry
+    +configure(ModeIdentifier, DatabaseIdentifier) void
+    +process(DataPoint) void
+  }
+
+  ProcessingMode <|.. DumpMode
+  ProcessingMode <|.. PassthroughMode
+  ProcessingMode <|.. ValidateMode
+  Database <|.. PostgresDatabase
+  Database <|.. RedisDatabase
+  Database <|.. ElasticsearchDatabase
+  DataProcessor *-- ModeRegistry
+  DataProcessor *-- DatabaseRegistry
+  DataProcessor --> ProcessingMode : current
+  DataProcessor --> Database : current
+  ModeRegistry o-- ProcessingMode
+  DatabaseRegistry o-- Database
+  ProcessingMode ..> Database : uses
+  DataProcessor ..> DataPoint : processes`;
+const { svg } = await mermaid.render('cd-svg', src);
+document.getElementById('cd').innerHTML = svg;
+
+document.querySelectorAll('#cd svg.classDiagram g.node rect, #cd svg.classDiagram .classGroup rect').forEach(r => {
+  r.setAttribute('rx', '6');
+});
+</script>
